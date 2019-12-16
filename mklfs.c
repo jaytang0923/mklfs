@@ -269,6 +269,9 @@ int main(int argc, char **argv) {
     cfg.block_count = fs_size / cfg.block_size;
     cfg.lookahead_size   = cfg.block_count;
     cfg.context     = NULL;
+    //jay add this 
+    cfg.cache_size = cfg.block_size,
+    cfg.block_cycles = cfg.block_size/8,
 
 	data = calloc(1, fs_size);
 	if (!data) {
